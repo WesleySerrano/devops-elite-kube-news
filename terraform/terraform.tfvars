@@ -1,0 +1,5 @@
+ssh_key_name    = "Terraform Jornada"
+jenkins_vm_name = "jenkins-vm"
+do_token        = "dop_v1_bb1bf5f2a2a1a97886e291b89cbac7b7ac8e1a802db27ba50e83dc984eb35087"
+region          = "nyc1"
+vm_specs        = "s-2vcpu-2gb"

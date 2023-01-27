@@ -80,5 +80,4 @@ spec:
   ports:
     - port: 8180
       targetPort: 8080
-      nodePort: 30000
-  type: NodePort
+  type: LoadBalancer
