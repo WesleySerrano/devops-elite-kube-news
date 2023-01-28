@@ -38,7 +38,7 @@ resource "digitalocean_kubernetes_cluster" "k8s" {
 }
 
 variable "ssh_key_name" {
-  default = "Terraform Jornada"
+  default = ""
 }
 
 variable "jenkins_vm_name" {
@@ -58,10 +58,10 @@ variable "vm_specs" {
 }
 
 output "jenkins_ip" {
-    value = digitalocean_droplet.jenkis.ipv4_address
+  value = digitalocean_droplet.jenkis.ipv4_address
 }
 
 resource "local_file" "kube_config" {
-    content = digitalocean_kubernetes_cluster.k8s.kube_config.0.raw_config
-    filename = "kube_config.yaml"
+  content  = digitalocean_kubernetes_cluster.k8s.kube_config.0.raw_config
+  filename = "kube_config.yaml"
 }
