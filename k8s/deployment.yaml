@@ -44,7 +44,7 @@ kind: Deployment
 metadata: 
   name: kube-news-web
 spec:
-  replicas: 4
+  replicas: 2
   selector:
     matchLabels:
       app: kube-news-web
@@ -78,6 +78,6 @@ spec:
   selector:
     app: kube-news-web
   ports:
-    - port: 8180
+    - port: 80
       targetPort: 8080
   type: LoadBalancer
