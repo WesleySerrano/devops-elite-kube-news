@@ -34,8 +34,8 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
     /etc/apt/sources.list.d/jenkins.list > /dev/null
 
 apt-get update
-apt-get install fontconfig openjdk-17-jdk
-apt-get install jenkins
+apt-get install fontconfig openjdk-17-jdk -y
+apt-get install jenkins -y
 
 usermod -aG docker jenkins
 systemctl restart jenkins
